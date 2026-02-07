@@ -60,9 +60,9 @@ public class Casa {
 
                 case "pannelli fotovoltaici":
                     PannelliFotovoltaici pannelliFotovoltaici = new PannelliFotovoltaici();
-                    if (!config.getInt("n_pannelli").equals(0)) {
+                    if (!config.getInt("n_pannelli") != 0 && !config.getInt("potenza_sole") != 0 && !config.getDouble("area") != 0.0) {
                         pannelliFotovoltaici.setNPannelli(config.getInt("n_pannelli"));
-                        pannelliFotovoltaici.setPotenzaSole(config.getDouble("potenza_sole"));
+                        pannelliFotovoltaici.setPotenzaSole(config.getInt`("potenza_sole"));
                         pannelliFotovoltaici.setArea(config.getDouble("area"));
                         elettrodomestico = pannelliFotovoltaici;
                     }
