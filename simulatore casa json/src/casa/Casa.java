@@ -58,6 +58,16 @@ public class Casa {
                     elettrodomestico = frigo;
                     break;
 
+                case "pannelli fotovoltaici":
+                    PannelliFotovoltaici pannelliFotovoltaici = new PannelliFotovoltaici();
+                    if (!config.getInt("n_pannelli").equals(0)) {
+                        pannelliFotovoltaici.setNPannelli(config.getInt("n_pannelli"));
+                        pannelliFotovoltaici.setPotenzaSole(config.getDouble("potenza_sole"));
+                        pannelliFotovoltaici.setArea(config.getDouble("area"));
+                        elettrodomestico = pannelliFotovoltaici;
+                    }
+                    break;
+
                 default:
                     System.err.println("Tipo elettrodomestico non riconosciuto: " + tipo);
                     continue;
