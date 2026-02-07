@@ -58,9 +58,9 @@ public class Casa {
                     elettrodomestico = frigo;
                     break;
 
-                case "pannelli fotovoltaici":
+                case "pannellifotovoltaici":
                     PannelliFotovoltaici pannelliFotovoltaici = new PannelliFotovoltaici();
-                    if (!config.getInt("n_pannelli") != 0 && !config.getInt("potenza_sole") != 0 && !config.getDouble("area") != 0.0) {
+                    if (!(config.getInt("n_pannelli") != 0)) {
                         pannelliFotovoltaici.setNPannelli(config.getInt("n_pannelli"));
                         pannelliFotovoltaici.setPotenzaSole(config.getInt`("potenza_sole"));
                         pannelliFotovoltaici.setArea(config.getDouble("area"));
